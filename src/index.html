@@ -5,86 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CSS e JS responsáveis pelo funcionamento do Bootstrap -->
+    <!--@ CSS e JS responsáveis pelo funcionamento do Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <title>Preview</title>
+    <title>Bootstrap 4 - Button Generator</title>
 </head>
 
 <body>
     <div class="main">
         <div class='jumbotron text-center'>
-            <h1>Bootstrap 4 Generator</h1>
+            <h1>Bootstrap 4 Button Generator</h1>
         </div>
-    </div>
 
-    <div class='container'>
-        <div class="card">
-            <div class='bg-light p-3 text-center'>
-                <button class="btn btn-primary align-self-center">Button</button>
-                <button class="btn btn-primary align-self-center active">Button</button>
-                <button class="btn btn-primary align-self-center" disabled>Button</button>
-            </div>
+        <div class="container">
+            <div id="selected-component"></div>
 
-            <!-- Terminar o design com pelo menos o botao, para entao prosseguir com o código -->
+            <br>
 
-            <div class='card-body'>
-                <h5>Color:</h5>
+            <div class="container">
+                <div class="card">
+                    <h3 class="card-header text-center">Code</h3>
 
-                <div class='container row-cols-2'>
-                    <div class="container row align-items-center">
-                        <input type="radio" value='primary'>
-                        <p>primary</p>
+                    <div class="card-body">
+                        <div class="container p-3 alert-dark rounded position-relative">
+                            <code id='component-code'></code>
+                        </div>                        
                     </div>
 
-                    <div class="container row align-items-center">
-                        <input type="radio" value='secondary'>
-                        <p>secondary</p>
+                    <div class="card-footer d-flex justify-content-start align-items-center">
+                        <button class="btn btn-primary btn-md container-fluid" onclick="copyTextToClipboard()">Copy text</button>
+                        <i class="container text-success invisible" id='copy-success-text'>Copied to clipboard!</i>
                     </div>
-
-                    <div class="container row align-items-center">
-                        <input type="radio" value='success'>
-                        <p>success</p>
-                    </div>
-
-                    <div class="container row align-items-center">
-                        <input type="radio" value='info'>
-                        <p>info</p>
-                    </div>
-
-                    <div class="container row align-items-center">
-                        <input type="radio" value='warning'>
-                        <p>warning</p>
-                    </div>
-
-                    <div class="container row align-items-center">
-                        <input type="radio" value='danger'>
-                        <p>danger</p>
-                    </div>
-
-                    <div class="container row align-items-center">
-                        <input type="radio" value='dark'>
-                        <p>dark</p>
-                    </div>
-
-                    <div class="container row align-items-center">
-                        <input type="radio" value='light'>
-                        <p>light</p>
-                    </div>
-
-                    <div class="container row align-items-center">
-                        <input type="radio" value='link'>
-                        <p>link</p>
-                    </div>
-
                 </div>
             </div>
         </div>
     </div>
 
+    <!--@ Código para preencher os componentes após sofrerem mudanças -->
     <script src='./index.js'></script>
 </body>
 
