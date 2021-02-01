@@ -128,6 +128,7 @@ function updateComponentCodeContainer() {
         }).join('').replace('id="generatedComponent"', '');
 }
 
+// Copiar texto para clipboard e mostrar mensagem de sucesso
 function copyTextToClipboard() {
     const userComponent = document.getElementById('generatedComponent').outerHTML.replace('id="generatedComponent"', '');
     const successText = document.getElementById('copy-success-text');
